@@ -1,0 +1,5 @@
+f = open('d:/python nc/PythonNC/Lab03/Chuong10/alkaline_metals.txt', 'r')
+f.seek(13,0)
+line = f.readline()
+print(line)
+f.close()
