@@ -1,0 +1,10 @@
+def sparse_add(vector_a, vector_b):
+  sum = vector_a.copy()
+  for key in vector_b:
+    if key in sum:
+      sum[key] = sum[key] + vector_b[key]
+    else:
+      sum[key] = vector_b[key]
+
+  return sum
+sparse_add({1: 3, 2: 3, 3: 4}, {2: 4, 3: 5, 4: 6})
