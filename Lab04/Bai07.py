@@ -1,9 +1,12 @@
-def count_duplicates(dict):
-  fun = []
-  for key, value in dict.items():
-    if value in fun:
-      print(value)
-    else:
-      fun.append(value)
-dict = {1,9,7,2,5,7,6}
-count_duplicates(dict)
+def count_duplicates(dictionary):
+    duplicates = 0
+    values = list(dictionary.values())
+    for item in values:      
+        if values.count(item) >= 2:
+            duplicates = duplicates + 1     
+            num_occurrences = values.count(item)
+            for i in range(num_occurrences):
+                values.remove(item)
+
+    return duplicates
+count_duplicates({'A': 1, 'B': 2, 'C': 2, 'D': 1, 'E': 3})
